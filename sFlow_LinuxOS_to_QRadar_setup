@@ -1,0 +1,24 @@
+#!/bin/sh
+echo test fow sFlow connection - 
+echo when this file is downloaded via wget on a machine forwarding flow to QRadar, the latter should notify through Network Activity. 
+echo Just for fun i'll briefly explain a quick Linux OS sFlow setup to a QRadar machine. Cat this file to know more as it's too verbose. 
+
+#First downlaod and install sFlow 
+#wget https://github.com/sflow/host-sflow/releases/download/v2.0.25-3/hsflowd-ubuntu18_2.0.25-3_amd64.deb
+#sudo dpkg -i hsflowd-ubuntu18_2.0.25-3_amd64.deb
+#sudo systemctl enable hsflowd
+
+#Edit the /etc/hsflowd.conf file and add this basic setup. The file itself explains very well everything inside. 
+#sflow {
+#  collector { ip="youripandport" }
+#  pcap { speed=1G-1T }
+#  tcp { }
+#  systemd { }
+#}
+
+#Now just restart the dameon with sudo systemctl restart hsflowd
+
+#That's it. Literally. 
+#What's left is to configure the flow source via the QRadar web UI. You can do that by going on the Admin panel -> Flows: select Flow Sources 
+#-> click Add and select sFlow. Everything else is your choice. Monitoring interface can be any. Monitoring port should stay 6344. 
+#Add firewall rules to have the Linux OS machine acces your QRadar machine; i assume you know how to do this. 
