@@ -22,3 +22,12 @@ echo Just for fun i'll briefly explain a quick Linux OS sFlow setup to a QRadar 
 #What's left is to configure the flow source via the QRadar web UI. You can do that by going on the Admin panel -> Flows: select Flow Sources 
 #-> click Add and select sFlow. Everything else is your choice. Monitoring interface can be any. Monitoring port should stay 6344. 
 #Add firewall rules to have the Linux OS machine acces your QRadar machine; i assume you know how to do this. 
+
+#Wanna browse internet through the terminal to generate flow? 
+#sudo apt-get install w3m w3m-img
+#to open a webpage simply type in a terminal window: w3m <url_of_the_webpage>
+#to open a new page: type Shift-U
+#to go back one page: Shift-B
+#open a new tab: Shift-T
+#W3M can handle Gmail(!)
+#If you use for example XTerm, W3M is even capable of showing images. Cool. 
