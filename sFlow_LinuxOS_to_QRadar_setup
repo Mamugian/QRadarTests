@@ -1,5 +1,5 @@
 #!/bin/sh
-echo test fow sFlow connection - 
+echo test sFlow connection - 
 echo when this file is downloaded via wget on a machine forwarding flow to QRadar, the latter should notify through Network Activity. 
 echo Just for fun i'll briefly explain a quick Linux OS sFlow setup to a QRadar machine. Cat this file to know more as it's too verbose. 
 
